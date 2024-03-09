@@ -1,11 +1,10 @@
 import React from 'react';
 import Header from './Header';
 import Hero from './Hero';
-import { useContext } from 'react';
-import UserContext from '../context/UserContext';
+import useUser from '../context/UserContext';
 
 const UserContent = () => {
-  const { user } = useContext(UserContext);
+  const { user } = useUser();
   return (
     <>
       {user === '' ? null : (

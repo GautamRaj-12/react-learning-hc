@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import UserContext from '../context/UserContext';
+import useUser from '../context/UserContext';
 import useTheme from '../context/ThemeContext';
 
 const HeroInput = () => {
-  const { setUser } = useContext(UserContext);
+  const { setUser } = useUser();
   const handleChange = (e) => {
     setUser(e.target.value);
   };
@@ -19,8 +19,8 @@ const HeroInput = () => {
 
   return (
     <>
-      <div className='hero-input flex justify-center flex-wrap items-center gap-6 py-4'>
-        <h2 className='bg-rose-700 px-3 py-2 rounded-lg text-white font-semibold'>
+      <div className='flex flex-wrap items-center justify-center gap-6 py-4 hero-input'>
+        <h2 className='px-3 py-2 font-semibold text-white rounded-lg bg-rose-700'>
           Choose your hero
         </h2>
         <div className='flex gap-3'>

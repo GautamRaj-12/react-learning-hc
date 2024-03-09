@@ -1,5 +1,5 @@
 import './App.css';
-import { UserContextProvider } from './context/UserContextProvider';
+import { UserContextProvider } from './context/UserContext';
 import HeroInput from './components/HeroInput';
 import UserContent from './components/UserContent';
 import { ThemeContextProvider } from './context/ThemeContext';
@@ -14,6 +14,7 @@ function App() {
     setThemeMode('dark');
   };
 
+  const [user, setUser] = useState('');
   //actual change in theme
   useEffect(() => {
     document.querySelector('html').classList.remove('light', 'dark');
@@ -22,7 +23,7 @@ function App() {
   return (
     <>
       <ThemeContextProvider value={{ themeMode, lightTheme, darkTheme }}>
-        <UserContextProvider>
+        <UserContextProvider value={{ user, setUser }}>
           <HeroInput />
           <UserContent />
         </UserContextProvider>

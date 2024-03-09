@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-color: #111;
+}
+h2 {
+  text-align: center;
+}
+button {
+  background: rgb(37, 57, 230);
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 2px;
+  transition: all 0.3s;
+  margin-right: 1rem;
+}
+button:hover {
+  background-color: transparent;
+  border: 1px solid rgb(37, 57, 230);
+  scale: 1.2;
+}
+.counter,
+.confirm-tickets,
+.price {
+  height: 150px;
+  border: 2px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
